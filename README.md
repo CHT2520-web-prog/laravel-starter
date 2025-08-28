@@ -4,7 +4,7 @@ If you are using Codespaces, this repo can be used as a starting point for your 
 
 ## Step 1 - Create an assignment repository
 
--   Look for the 'Use this template' button and then select 'Create a new repository'. You should be taken to a new page.
+-   Look for the green 'Use this template' button in the top-left of this page and select 'Create a new repository'. You should be taken to a new page.
     -   Enter a name for your repository e.g. _assignment1_
     -   Under 'Choose visibility', make the repository private. It's important to make the repo private. You don't want someone else copying your work!
     -   Finally select 'Create repository'. A repository will be created for you.
@@ -15,7 +15,7 @@ If you are using Codespaces, this repo can be used as a starting point for your 
 -   Visit https://github.com/codespaces
 -   Select 'New codespace'. You should be taken to a new page.
 -   From the 'Select a repository' dropdown select the name of the repository you have just created.
--   Select 'Create codespace'. A codespace containg the respository code will be created for you.
+-   Select 'Create codespace'. A codespace containing the repository code will be created for you.
 
 ## Step 3 - Install dependencies
 
