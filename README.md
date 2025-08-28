@@ -1,61 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Assignment Starter
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+If you are using Codespaces, this repo can be used as a starting point for your assignment.
 
-## About Laravel
+## Step 1 - Create an assignment repository
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-   Look for the 'Use this template' button and then select 'Create a new repository'. You should be taken to a new page.
+    -   Enter a name for your repository e.g. _assignment1_
+    -   Under 'Choose visibility', make the repository private. It's important to make the repo private. You don't want someone else copying your work!
+    -   Finally select 'Create repository'. A repository will be created for you.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Step 2 - Create a codespace from your repository
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   Open a new tab
+-   Visit https://github.com/codespaces
+-   Select 'New codespace'. You should be taken to a new page.
+-   From the 'Select a repository' dropdown select the name of the repository you have just created.
+-   Select 'Create codespace'. A codespace containg the respository code will be created for you.
 
-## Learning Laravel
+## Step 3 - Install dependencies
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The codespace already has Laravel installed. You just need to complete setting up and configuring Laravel before you can start work on the assignment.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   In your codespace, in the terminal enter:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+composer install
+```
 
-## Laravel Sponsors
+-   This will install all the libraries needed for Laravel to work.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Step 4 - Configure the application using a .env file
 
-### Premium Partners
+-   Create a new file name _.env_ in the root of the codespace.
+-   Copy the entire contents of _example.env_ into _.env_
+-   In _.env_
+    -   Change the `APP_URL` to be the URL of your codespace e.g.
+    ```
+    APP_URL=https://special-potato-ppvp74vgxfrg6r.github.dev/
+    ```
+    -   Change the database settings to the following:
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=cht2520
+    DB_USERNAME=root
+    DB_PASSWORD=secret
+    ```
+-   Save your changes to `.env`
+-   In the terminal enter the following:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```
+php artisan key:generate
+```
 
-## Contributing
+This will generate a key that is used to encode potentially sensitive data e.g. session data, cookies etc.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Then enter
 
-## Code of Conduct
+```
+php artisan migrate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+This will generate some basic database tables that Laravel needs to work.
 
-## Security Vulnerabilities
+> Why do we need these extra steps? Previously we create a new Laravel application using Composer's 'create project' command. This automatically generated the application key and set-up tables for us. Here we are taking a slightly more manual approach, but the end result is the same.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Step 5 - Test the installation is successful
 
-## License
+In the terminal enter
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+php artisan serve
+```
+
+You should be able to view you Laravel app on port 8000 where you will see the 'Let's get started' message.
+
+## Step 6 - Using Git
+
+-   Back in your Codespace, open the README.md file.
+-   Delete the entire contents and enter the following:
+
+```
+# CHT2520 Assignment 1 U0123456 Firstname Lastname
+```
+
+-   Save the changes.
+
+-   From the menu on the lefthand side, select Source Control (it looks like some circles connected by lines)
+
+-   Enter a message e.g. 'Initial commit'
+
+-   Select 'Commit'
+-   Answer 'yes' to staging all changes
+-   Now click 'Sync Changes'
+-   You'll be asked if you want to pull and push changes
+-   Answer 'ok'
+-   Go back to the tab contained your assignment1 repository. Check you can see the updated README.
+
+## Step 7 - Get on with the assignment
+
+Now you are set-up, you won't need to go through this process again.
+You simply need to develop your app in the codespace and make sure you regularly push your changes to your assignment repo.
