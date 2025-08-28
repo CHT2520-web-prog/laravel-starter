@@ -96,7 +96,7 @@ You should be able to view you Laravel app on port 8000 where you will see the '
 -   Now click 'Sync Changes'
 -   You'll be asked if you want to pull and push changes
 -   Answer 'ok'
--   Go back to the tab contained your assignment1 repository. Check you can see the updated README.
+-   Go back to the tab contained your assignment1 repository. Refresh this page and check you can see the updated README.
 
 ## Step 7 - Get on with the assignment
 
