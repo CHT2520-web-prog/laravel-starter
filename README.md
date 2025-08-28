@@ -34,9 +34,13 @@ composer install
 -   Create a new file name _.env_ in the root of the codespace.
 -   Copy the entire contents of _example.env_ into _.env_
 -   In _.env_
-    -   Change the `APP_URL` to be the URL of your codespace e.g.
+    -   Change the `APP_URL` to be the following e.g.
     ```
-    APP_URL=https://special-potato-ppvp74vgxfrg6r.github.dev/
+    APP_URL=https://name-of-codespace-8000.app.github.dev/
+    ```
+    -   You can get'name-of-codespace' from the URL in the browser. It will be two words and a random series of letters and numbers e.g. _special-potato-ppvp74vgxfrg6r_. For this example I'd enter an APP_URL of:-
+    ```
+    APP_URL=https://special-potato-ppvp74vgxfrg6r-8000.app.github.dev/
     ```
     -   Change the database settings to the following:
     ```
