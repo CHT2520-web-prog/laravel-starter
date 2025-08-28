@@ -38,7 +38,7 @@ composer install
     ```
     APP_URL=https://name-of-codespace-8000.app.github.dev/
     ```
-    -   You can get'name-of-codespace' from the URL in the browser. It will be two words and a random series of letters and numbers e.g. _special-potato-ppvp74vgxfrg6r_. For this example I'd enter an APP_URL of:-
+    -   You can get the 'name-of-codespace' from the URL in the browser. It will be two words and a random series of letters and numbers e.g. _special-potato-ppvp74vgxfrg6r_. So for this example I'd enter an APP_URL of:-
     ```
     APP_URL=https://special-potato-ppvp74vgxfrg6r-8000.app.github.dev/
     ```
