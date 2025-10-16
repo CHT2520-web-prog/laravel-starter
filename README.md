@@ -3,7 +3,7 @@ This repository can be used as a starting point for developing a Laravel applica
 
 ## Install dependencies
 The repository already has Laravel installed. You just need to complete setting up and configuring Laravel before you can start working on your project.
--   In your codespace, in the terminal enter:
+-   In your Codespace, in the terminal enter:
 ```
 composer install
 ```
@@ -55,5 +55,5 @@ In the terminal enter
 php artisan serve
 ```
 
-You should be able to view you Laravel app on port 8000 where you will see the 'Let's get started' message.
+You should be able to view your Laravel app on port 8000 where you will see the 'Let's get started' message.
 
