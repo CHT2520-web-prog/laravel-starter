@@ -5,7 +5,7 @@ This repository can be used as a starting point for developing a Laravel applica
 The repository already has Laravel installed. You just need to complete setting up and configuring Laravel before you can start working on your project.
 -   In your Codespace, in the terminal enter:
 ```
-composer install
+composer update
 ```
 -   This will install all the libraries needed for Laravel to work.
 
